@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".Controller.ListaUsuarios">
         </activity>
+        <activity android:name=".Controller.UsuarioActivity">
+        </activity>
     </application>
 
 </manifest>
