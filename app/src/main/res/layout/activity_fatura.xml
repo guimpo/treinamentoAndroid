@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:padding="20dp"
-        android:background="@color/fundo_perfil"
+        android:background="@drawable/background_login"
         tools:context=".Controller.FaturaActivity">
 
     <TextView

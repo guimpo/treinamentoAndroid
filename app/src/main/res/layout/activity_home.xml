@@ -64,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/white"
                     android:text="Meu Perfil"/>
 
 
@@ -88,6 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/white"
                     android:text="Pessoas"/>
 
         </LinearLayout>
@@ -114,6 +116,7 @@
                 android:background="@color/fundo_pessoas">
 
             <ImageView
+                    android:id="@+id/gerar_fatura_home"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
@@ -121,24 +124,27 @@
                     android:src="@drawable/ic_notifications"/>
 
             <TextView
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Notificações"/>
+                    android:text="Gerar Fatura"/>
 
 
         </LinearLayout>
         <LinearLayout
-                android:id="@+id/anotacao"
+
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:textSize="50sp"
                 android:orientation="vertical"
                 android:layout_weight="0.8"
                 android:background="@color/fundo_perfil">
+
             <ImageView
+                    android:id="@+id/pagar_fatura_home"
                     android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_notes"/>
@@ -147,7 +153,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Minhas Anotações"/>
+                    android:textColor="@color/white"
+                    android:text="Pagar Fatura"/>
 
 
         </LinearLayout>
