@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyApiApplication</string>
+    <string name="ola_usuario">Olá</string>
+</resources>
