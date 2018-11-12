@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.example.paulo.myapiapplication.R;
 import com.example.paulo.myapiapplication.Utils.ServiceGenerator;
 
@@ -39,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         mPessoas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, ListaUsuarios.class);
+                Intent i = new Intent(HomeActivity.this, ListaUsuariosActivity.class);
                 startActivity(i);
             }
         });

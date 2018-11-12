@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".Controller.HomeActivity">
         </activity>
-        <activity android:name=".Controller.ListaUsuarios">
+        <activity android:name=".Controller.ListaUsuariosActivity">
         </activity>
         <activity android:name=".Controller.UsuarioActivity">
         </activity>

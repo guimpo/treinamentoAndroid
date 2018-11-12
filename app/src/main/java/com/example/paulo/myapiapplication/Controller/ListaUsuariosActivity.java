@@ -20,7 +20,7 @@ import retrofit2.Retrofit;
 
 import java.util.List;
 
-public class ListaUsuarios extends AppCompatActivity  implements AdapterPositionOnClickListener {
+public class ListaUsuariosActivity extends AppCompatActivity  implements AdapterPositionOnClickListener {
 
     private RecyclerView mRecyclerView;
     private UsuarioAdapter mAdapter;
@@ -54,15 +54,15 @@ public class ListaUsuarios extends AppCompatActivity  implements AdapterPosition
             public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
                 if (response.isSuccessful()) {
                     // POPULAR mUsuarios
-                    mAdapter = new UsuarioAdapter(ListaUsuarios.this, response.body());
-                    mAdapter.setAdapterPositionOnClickListener(ListaUsuarios.this);
+                    mAdapter = new UsuarioAdapter(ListaUsuariosActivity.this, response.body());
+                    mAdapter.setAdapterPositionOnClickListener(ListaUsuariosActivity.this);
                     mRecyclerView.setAdapter(mAdapter);
                 }
             }
 
             @Override
             public void onFailure(Call<List<Usuario>> call, Throwable t) {
-                Toast.makeText(ListaUsuarios.this, "ruim", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListaUsuariosActivity.this, "ruim", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -71,7 +71,7 @@ public class ListaUsuarios extends AppCompatActivity  implements AdapterPosition
     public void setAdapterPositionOnClickListener(View view, final int position) {
 
         Usuario u = mAdapter.getUsuario(position);
-        Intent i  = new Intent(ListaUsuarios.this, UsuarioActivity.class);
+        Intent i  = new Intent(ListaUsuariosActivity.this, UsuarioActivity.class);
         i.putExtra("usuario", u);
         startActivity(i);
     }
