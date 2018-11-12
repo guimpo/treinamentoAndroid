@@ -28,6 +28,8 @@
         </activity>
         <activity android:name=".Controller.UsuarioActivity">
         </activity>
+        <activity android:name=".Controller.FaturaActivity">
+        </activity>
     </application>
 
 </manifest>

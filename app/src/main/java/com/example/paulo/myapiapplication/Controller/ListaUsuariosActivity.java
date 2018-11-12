@@ -69,7 +69,6 @@ public class ListaUsuariosActivity extends AppCompatActivity  implements Adapter
 
     @Override
     public void setAdapterPositionOnClickListener(View view, final int position) {
-
         Usuario u = mAdapter.getUsuario(position);
         Intent i  = new Intent(ListaUsuariosActivity.this, UsuarioActivity.class);
         i.putExtra("usuario", u);
