@@ -86,7 +86,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
 
                 if (response.isSuccessful()) {
-                    Toast.makeText(LoginActivity.this, "irParaHome", Toast.LENGTH_SHORT).show();
                     Toast.makeText(LoginActivity.this, response.body().email, Toast.LENGTH_SHORT).show();
                     ServiceGenerator.USER = response.body();
 
