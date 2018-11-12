@@ -8,6 +8,9 @@ import java.io.Serializable;
 @JsonRootName("user")
 public class Usuario implements Serializable {
 
+    @SerializedName("id")
+    public int id;
+
     @SerializedName("name")
     public String name;
 
@@ -17,14 +20,24 @@ public class Usuario implements Serializable {
     @SerializedName("password")
     public String password;
 
+    @SerializedName("telefone")
+    public String telefone;
+
+    @SerializedName("cpf")
+    public String cpf;
+
+    @SerializedName("saldo")
+    public double saldo;
+
+    @SerializedName("descricao")
+    public String descricao;
+
+    @SerializedName("created_at")
+    public String created_at;
+
+    @SerializedName("last_login")
+    public String last_login;
+
     @SerializedName("picture")
     public String picture;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
