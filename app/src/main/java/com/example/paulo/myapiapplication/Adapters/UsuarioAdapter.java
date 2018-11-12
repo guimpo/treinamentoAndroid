@@ -37,7 +37,6 @@ public class UsuarioAdapter  extends RecyclerView.Adapter<UsuarioAdapter.MyViewH
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View holder = inflater.inflate(R.layout.item_usuario, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(holder);
-
         return viewHolder;
     }
 
@@ -47,9 +46,13 @@ public class UsuarioAdapter  extends RecyclerView.Adapter<UsuarioAdapter.MyViewH
 
         holder.mNome.setText(usuario.name);
         holder.mEmail.setText(usuario.email);
-
         String imageUri = usuario.picture;
         Picasso.get().load(imageUri).into(holder.mFotoBtn);
+    }
+
+    public Usuario getUsuario(int position)
+    {
+        return mList.get(position);
     }
 
     public void deleteItem(int positon){
@@ -64,16 +67,16 @@ public class UsuarioAdapter  extends RecyclerView.Adapter<UsuarioAdapter.MyViewH
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+        public ImageView mFotoBtn;
         public TextView mNome;
         public TextView mEmail;
-        private ImageView mFotoBtn;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
+            mFotoBtn = itemView.findViewById(R.id.foto);
             mNome = itemView.findViewById(R.id.lb_nome);
             mEmail = itemView.findViewById(R.id.lb_email);
-            mFotoBtn = itemView.findViewById(R.id.foto);
 
             //Aplica a função do click na view toda
             //itemView.setOnClickListener(this);
@@ -82,15 +85,12 @@ public class UsuarioAdapter  extends RecyclerView.Adapter<UsuarioAdapter.MyViewH
             mFotoBtn.setOnClickListener(this);
         }
 
-
-        //Passar os parametros que vai ser executado na HistoryActivity
         @Override
         public void onClick(View view) {
 
             //Verificar se a ponte de contato entre o activity e o adapter foi passado
             if(mAadapterPositionOnClickListener != null){
 
-                //passar os parametros que vai ser exibido lá na history activity
                 mAadapterPositionOnClickListener.setAdapterPositionOnClickListener(view, getPosition());
             }
         }

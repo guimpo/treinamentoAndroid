@@ -38,7 +38,6 @@
             android:gravity="left">
 
         <TextView
-                android:id="@+id/lb_email_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
@@ -64,7 +63,6 @@
                 android:textSize="12sp"/>
 
         <TextView
-                android:id="@+id/lb_saldo_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
@@ -90,7 +88,6 @@
                 android:textSize="12sp"/>
 
         <TextView
-                android:id="@+id/lb_cpf_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
@@ -116,7 +113,6 @@
                 android:textSize="12sp"/>
 
         <TextView
-                android:id="@+id/lb_telefone_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
@@ -142,7 +138,6 @@
                 android:textSize="12sp"/>
 
         <TextView
-                android:id="@+id/lb_descricao_usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-thin"
