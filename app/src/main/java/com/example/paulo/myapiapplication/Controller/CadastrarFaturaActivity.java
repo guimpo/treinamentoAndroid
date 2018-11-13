@@ -17,7 +17,7 @@ import retrofit2.Retrofit;
 
 import java.util.HashMap;
 
-public class FaturaActivity extends AppCompatActivity {
+public class CadastrarFaturaActivity extends AppCompatActivity {
 
     private Button mBtn;
     private EditText mCod;
@@ -27,7 +27,7 @@ public class FaturaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fatura);
+        setContentView(R.layout.activity_cadastrar_fatura);
         loadAttributes();
     }
 
@@ -48,15 +48,15 @@ public class FaturaActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<HashMap<String, String>> call, Response<HashMap<String, String>> response) {
                         if (response.isSuccessful()) {
-                            Toast.makeText(FaturaActivity.this, "ok", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(FaturaActivity.this, response.body().get("status"), Toast.LENGTH_SHORT).show();
-                            Toast.makeText(FaturaActivity.this, response.body().get("msg"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CadastrarFaturaActivity.this, "ok", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CadastrarFaturaActivity.this, response.body().get("status"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CadastrarFaturaActivity.this, response.body().get("msg"), Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<HashMap<String, String>> call, Throwable t) {
-                        Toast.makeText(FaturaActivity.this, "ruim", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CadastrarFaturaActivity.this, "ruim", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

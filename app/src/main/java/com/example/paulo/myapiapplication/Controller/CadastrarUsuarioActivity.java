@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.HashMap;
 
-public class CadastroActivity extends AppCompatActivity {
+public class CadastrarUsuarioActivity extends AppCompatActivity {
 
     private EditText et_nome;
     private EditText et_email;
@@ -69,7 +69,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<HashMap<String, String>> call, Response<HashMap<String, String>> response) {
                 if(response.isSuccessful()) {
-                    Toast.makeText(CadastroActivity.this, response.body().get("msg"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CadastrarUsuarioActivity.this, response.body().get("msg"), Toast.LENGTH_SHORT).show();
                 }
             }
 

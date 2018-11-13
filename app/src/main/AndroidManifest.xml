@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".Controller.LoginActivity">
         </activity>
-        <activity android:name=".Controller.CadastroActivity">
+        <activity android:name=".Controller.CadastrarUsuarioActivity">
         </activity>
         <activity android:name=".Controller.HomeActivity">
         </activity>
@@ -28,9 +28,11 @@
         </activity>
         <activity android:name=".Controller.UsuarioActivity">
         </activity>
-        <activity android:name=".Controller.FaturaActivity">
+        <activity android:name=".Controller.CadastrarFaturaActivity">
         </activity>
         <activity android:name=".Controller.PagarFaturaActivity">
+        </activity>
+        <activity android:name=".Controller.AtualizarUsuarioActivity">
         </activity>
     </application>
 

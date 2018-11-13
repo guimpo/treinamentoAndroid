@@ -28,4 +28,7 @@ public interface API {
 
     @GET("/faturas/pay/{id}")
     public Call<HashMap<String,String>> pagarFatura(@Header("Authorization") String token, @Path("id") String id);
+
+    @PATCH("user/update")
+    Call<HashMap<String, String>> editar(@Header("Authorization") String token, @Body Usuario user);
 }

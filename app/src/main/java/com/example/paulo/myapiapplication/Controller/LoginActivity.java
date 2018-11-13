@@ -6,26 +6,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.paulo.myapiapplication.API.API;
-import com.example.paulo.myapiapplication.R;
-import com.example.paulo.myapiapplication.Utils.JsonUtils;
-import com.example.paulo.myapiapplication.Utils.ServiceGenerator;
 import com.example.paulo.myapiapplication.Model.Auth;
+import com.example.paulo.myapiapplication.Model.Fatura;
 import com.example.paulo.myapiapplication.Model.Usuario;
+import com.example.paulo.myapiapplication.R;
+import com.example.paulo.myapiapplication.Utils.ServiceGenerator;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail;
     private EditText etPass;
     private Button btAcessar;
+    private TextView btnCadastrarUsuario;
 
     public String token;
 
@@ -38,12 +40,21 @@ public class LoginActivity extends AppCompatActivity {
         btAcessar = findViewById(R.id.btAcessar);
 
         btAcessar.setOnClickListener(new View.OnClickListener() {
-                                         @Override
-                                         public void onClick(View v) {
-                                             acessar();
-                                         }
-                                     }
+                @Override
+                public void onClick(View v) {
+                 acessar();
+             }
+            }
         );
+
+        btnCadastrarUsuario = findViewById(R.id.btn_login_cadastrar);
+        btnCadastrarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, CadastrarUsuarioActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void acessar() {
@@ -88,7 +99,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Toast.makeText(LoginActivity.this, response.body().email, Toast.LENGTH_SHORT).show();
                     ServiceGenerator.USER = response.body();
-
                     Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(i);
                 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.List;
 
 @JsonRootName("user")
 public class Usuario implements Serializable {
@@ -40,4 +41,7 @@ public class Usuario implements Serializable {
 
     @SerializedName("picture")
     public String picture;
+
+    @SerializedName("faturas")
+    public List<Fatura> faturas;
 }

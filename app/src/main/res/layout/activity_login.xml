@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:textSize="28sp"
+            android:textColor="@color/white"
             android:text="Login"/>
 
     <EditText
@@ -44,5 +45,15 @@
             android:layout_height="wrap_content"
             android:text="ACESSAR"/>
 
+    <TextView
+            android:id="@+id/btn_login_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Cadastre-se"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:paddingBottom="15dp"
+            android:gravity="bottom"
+    />
 
 </LinearLayout>

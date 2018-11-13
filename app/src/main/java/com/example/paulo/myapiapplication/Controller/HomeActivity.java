@@ -7,15 +7,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.example.paulo.myapiapplication.Model.Fatura;
+import com.example.paulo.myapiapplication.Model.Usuario;
 import com.example.paulo.myapiapplication.R;
 import com.example.paulo.myapiapplication.Utils.ServiceGenerator;
+
 
 public class HomeActivity extends AppCompatActivity {
 
     private TextView mLblNome;
     private LinearLayout mPessoas;
     private ImageView mGerarFatura;
+    private ImageView mPagarFatura;
+    private ImageView mPerfil;
 
 
     @Override
@@ -51,7 +54,25 @@ public class HomeActivity extends AppCompatActivity {
         mGerarFatura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, FaturaActivity.class);
+                Intent i = new Intent(HomeActivity.this, CadastrarFaturaActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mPagarFatura = findViewById(R.id.pagar_fatura_home);
+        mPagarFatura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeActivity.this, PagarFaturaActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mPerfil = findViewById(R.id.perfil_home);
+        mPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeActivity.this, AtualizarUsuarioActivity.class);
                 startActivity(i);
             }
         });
