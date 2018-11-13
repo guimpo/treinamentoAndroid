@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".Controller.FaturaActivity">
         </activity>
+        <activity android:name=".Controller.PagarFaturaActivity">
+        </activity>
     </application>
 
 </manifest>

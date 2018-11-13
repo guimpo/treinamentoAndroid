@@ -1,6 +1,7 @@
 package com.example.paulo.myapiapplication.API;
 
 import com.example.paulo.myapiapplication.Model.Auth;
+import com.example.paulo.myapiapplication.Model.Fatura;
 import com.example.paulo.myapiapplication.Model.Usuario;
 import retrofit2.Call;
 import retrofit2.http.*;
@@ -22,4 +23,9 @@ public interface API {
     @GET("/users/current")
     Call<Usuario> getUser(@Header("Authorization") String token);
 
+    @POST("/faturas/create")
+    Call<HashMap<String, String>> registerFatura(@Header("Authorization") String token, @Body Fatura fatura);
+
+    @GET("/faturas/pay/{id}")
+    public Call<HashMap<String,String>> pagarFatura(@Header("Authorization") String token, @Path("id") String id);
 }
